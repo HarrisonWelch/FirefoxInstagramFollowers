@@ -1,0 +1,14 @@
+# Ignore login information, very important!
+login/**
+# **/login.json
+
+# Ignore 
+tmp/**
+# **/tmp_follower.txt
+# **/tmp_following.txt
+
+# Ignore python compiling
+__pycache__
+
+# Ignore gecko
+**/geckodriver.log
