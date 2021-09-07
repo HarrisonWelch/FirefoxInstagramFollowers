@@ -9,7 +9,13 @@ FILE_TMP_FOLLOWER = 'tmp_follower.txt'
 FILE_TMP_FOLLOWING = 'tmp_following.txt'
 
 def install_from_requirements():
-    subprocess.run("python -m pip install -r requirements.txt")
+    if os.name == 'nt':
+        subprocess.run("python -m pip install -r requirements.txt")
+    else:
+        # Need to install pip on Linux
+        subprocess.run("sudo apt install python3-pip")
+        # Python 3 specifically
+        subprocess.run("python3 -m pip install -r requirements.txt")
 
 def create_directories():
     # If the the login folder does not yet exist, make it exist.
